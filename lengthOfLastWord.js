@@ -11,4 +11,4 @@ var lengthOfLastWord = function(s) {
             return lastWord.length;
         }
     }
-};
+}
