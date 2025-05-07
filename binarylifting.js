@@ -1,26 +1,26 @@
 class Tree {
       constructor(n) {
           this.n = n;
-              this.LOG = Math.floor(Math.log2(n)) + 1;
-                  this.adj = Array.from({ length: n }, () => []);
-                      this.up = Array.from({ length: n }, () => Array(this.LOG).fill(-1));
-                          this.depth = Array(n).fill(0);
-                            }
+          this.LOG = Math.floor(Math.log2(n)) + 1;
+          this.adj = Array.from({ length: n }, () => []);
+          this.up = Array.from({ length: n }, () => Array(this.LOG).fill(-1));
+          this.depth = Array(n).fill(0);
+                   }
 
-                              addEdge(u, v) {
-                                  this.adj[u].push(v);
-                                      this.adj[v].push(u);
-                                        }
+          addEdge(u, v) {
+            this.adj[u].push(v);
+            this.adj[v].push(u);
+                              }
 
-                                          dfs(node, parent) {
-                                              this.up[node][0] = parent;
-                                                  for (let i = 1; i < this.LOG; i++) {
-                                                        if (this.up[node][i - 1] !== -1) {
-                                                                this.up[node][i] = this.up[this.up[node][i - 1]][i - 1];
-                                                                      }
-                                                                          }
+          dfs(node, parent) {
+              this.up[node][0] = parent;
+              for (let i = 1; i < this.LOG; i++) {
+                 if (this.up[node][i - 1] !== -1) {
+                    this.up[node][i] = this.up[this.up[node][i - 1]][i - 1];
+                                   }
+                                  }
 
-                                                                              for (let neighbor of this.adj[node]) {
+             for (let neighbor of this.adj[node]) {
                                                                                     if (neighbor !== parent) {
                                                                                             this.depth[neighbor] = this.depth[node] + 1;
                                                                                                     this.dfs(neighbor, node);
