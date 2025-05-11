@@ -45,4 +45,3 @@ class TSTNode {
                                                                                                                               return this._search(node.eq, word, idx + 1);
                                                                                                                                 }
                                                                                                                                 }
-}
