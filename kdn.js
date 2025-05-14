@@ -1,17 +1,17 @@
 class KDNode {
       constructor(point, depth = 0) {
           this.point = point;
-              this.left = this.right = null;
-                  this.depth = depth;
-                    }
+          this.left = this.right = null;
+          this.depth = depth;
+                }
                     }
 
-                    class KDTree {
-                      constructor() {
-                          this.root = null;
+      class KDTree {
+                  constructor() {
+                    this.root = null;
                             }
 
-                              insert(point) {
+                  insert(point) {
                                   this.root = this._insert(this.root, point, 0);
                                     }
 
