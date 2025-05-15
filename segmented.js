@@ -33,12 +33,11 @@ class SegmentTree {
                     this.tree[node] = this.tree[2 * node + 1] + this.tree[2 * node + 2];
                                                   }
                                       }
+      rangeQuery(ql, qr) {
+            return this.query(0, 0, this.n - 1, ql, qr);
+                  }
 
-                                                                                                                                      rangeQuery(ql, qr) {
-                                                                                                                                          return this.query(0, 0, this.n - 1, ql, qr);
-                                                                                                                                            }
-
-                                                                                                                                              pointUpdate(idx, val) {
-                                                                                                                                                  this.update(0, 0, this.n - 1, idx, val);
-                                                                                                                                                    }
-                                                                                                                                                    }
+      pointUpdate(idx, val) {
+           this.update(0, 0, this.n - 1, idx, val);
+                        }
+            }
