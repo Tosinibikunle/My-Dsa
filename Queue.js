@@ -15,11 +15,11 @@ class Queue {
           return this.items[0];
             }
 
-                                      isEmpty() {
-                                          return this.items.length === 0;
-                                            }
+      isEmpty() {
+          return this.items.length === 0;
+        }
 
-                                              size() {
-                                                  return this.items.length;
-                                                    }
-                                                    }
+      size() {
+         return this.items.length;
+            }
+               }
