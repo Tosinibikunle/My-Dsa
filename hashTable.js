@@ -20,8 +20,8 @@ class HashTable {
         const bucket = this.buckets[index];
         if (!bucket) return undefined;
 
-                                                                for (let [k, v] of bucket) {
-                                                                      if (k === key) return v;
-                                                                          }
-                                                                            }
-                                                                            }
+     for (let [k, v] of bucket) {
+        if (k === key) return v;
+             }
+           }
+    }
