@@ -12,13 +12,13 @@ class HashTable {
         if (!this.buckets[index]) {
            this.buckets[index] = [];
             }
-                                            this.buckets[index].push([key, value]);
-                                              }
+     this.buckets[index].push([key, value]);
+              }
 
-                                                get(key) {
-                                                    const index = this.hash(key);
-                                                        const bucket = this.buckets[index];
-                                                            if (!bucket) return undefined;
+      get(key) {
+        const index = this.hash(key);
+        const bucket = this.buckets[index];
+        if (!bucket) return undefined;
 
                                                                 for (let [k, v] of bucket) {
                                                                       if (k === key) return v;
