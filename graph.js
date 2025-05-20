@@ -21,25 +21,24 @@ class Graph {
           console.log(`${vertex} -> ${edges.join(', ')}`);
             }   
          }
-
-                                                                      bfs(start) {
-                                                                          const visited = new Set();
-                                                                              const queue = [start];
-                                                                                  
-                                                                                      while (queue.length) {
-                                                                                            const vertex = queue.shift();
-                                                                                                  if (!visited.has(vertex)) {
-                                                                                                          console.log(vertex);
-                                                                                                                  visited.add(vertex);
-                                                                                                                          const neighbors = this.adjList.get(vertex);
-                                                                                                                                  for (let neighbor of neighbors) {
-                                                                                                                                            if (!visited.has(neighbor)) {
-                                                                                                                                                        queue.push(neighbor);
-                                                                                                                                                                  }
-                                                                                                                                                                          }
-                                                                                                                                                                                }
-                                                                                                                                                                                    }
-                                                                                                                                                                                      }
+    
+  bfs(start) {
+      const visited = new Set();
+      const queue = [start];                                                                           
+      while (queue.length) {
+      const vertex = queue.shift();
+      if (!visited.has(vertex)) {
+          console.log(vertex);
+           visited.add(vertex);
+           const neighbors = this.adjList.get(vertex);
+           for (let neighbor of neighbors) {
+              if (!visited.has(neighbor)) {
+                 queue.push(neighbor);
+                        }
+                  }
+               }
+        }     
+     }
 
                                                                                                                                                                                         dfs(start, visited = new Set()) {
                                                                                                                                                                                             if (visited.has(start)) return;
