@@ -16,18 +16,18 @@ class MinHeap {
           this.heapifyUp();
             }
 
-                                        heapifyUp() {
-                                            let index = this.heap.length - 1;
-                                                while (
-                                                      index > 0 &&
-                                                            this.heap[this.getParentIndex(index)] > this.heap[index]
-                                                                ) {
-                                                                      this.swap(index, this.getParentIndex(index));
-                                                                            index = this.getParentIndex(index);
-                                                                                }
-                                                                                  }
+      heapifyUp() {
+         let index = this.heap.length - 1;
+         while (
+            index > 0 &&
+            this.heap[this.getParentIndex(index)] > this.heap[index]
+            ) {
+                 this.swap(index, this.getParentIndex(index));
+                 index = this.getParentIndex(index);
+                    }
+            }
 
-                                                                                    extractMin() {
+      extractMin() {
                                                                                         if (this.heap.length === 0) return null;
                                                                                             if (this.heap.length === 1) return this.heap.pop();
 
