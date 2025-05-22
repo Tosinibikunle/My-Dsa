@@ -28,19 +28,19 @@ class MinHeap {
             }
 
       extractMin() {
-                                                                                        if (this.heap.length === 0) return null;
-                                                                                            if (this.heap.length === 1) return this.heap.pop();
+          if (this.heap.length === 0) return null;
+          if (this.heap.length === 1) return this.heap.pop();
 
-                                                                                                const min = this.heap[0];
-                                                                                                    this.heap[0] = this.heap.pop();
-                                                                                                        this.heapifyDown();
-                                                                                                            return min;
-                                                                                                              }
+          const min = this.heap[0];
+          this.heap[0] = this.heap.pop();
+          this.heapifyDown();
+          return min;
+       }
 
-                                                                                                                heapifyDown() {
-                                                                                                                    let index = 0;
-                                                                                                                        while (this.getLeftChildIndex(index) < this.heap.length) {
-                                                                                                                              let smallerChildIndex = this.getLeftChildIndex(index);
+      heapifyDown() {
+          let index = 0;
+          while (this.getLeftChildIndex(index) < this.heap.length) {
+             let smallerChildIndex = this.getLeftChildIndex(index);
                                                                                                                                     const rightChildIndex = this.getRightChildIndex(index);
 
                                                                                                                                           if (
