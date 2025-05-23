@@ -27,15 +27,15 @@ class MaxHeap {
                             }
                       }
 
-                                                                                    extractMax() {
-                                                                                        if (this.heap.length === 0) return null;
-                                                                                            if (this.heap.length === 1) return this.heap.pop();
+      extractMax() {
+          if (this.heap.length === 0) return null;
+          if (this.heap.length === 1) return this.heap.pop();
 
-                                                                                                const max = this.heap[0];
-                                                                                                    this.heap[0] = this.heap.pop();
-                                                                                                        this.heapifyDown();
-                                                                                                            return max;
-                                                                                                              }
+          const max = this.heap[0];
+          this.heap[0] = this.heap.pop();
+          this.heapifyDown();
+          return max;
+       }
 
                                                                                                                 heapifyDown() {
                                                                                                                     let index = 0;
