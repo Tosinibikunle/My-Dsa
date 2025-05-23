@@ -3,29 +3,29 @@ class MaxHeap {
           this.heap = [];
             }
 
-              getParentIndex(i) { return Math.floor((i - 1) / 2); }
-                getLeftChildIndex(i) { return 2 * i + 1; }
-                  getRightChildIndex(i) { return 2 * i + 2; }
+      getParentIndex(i) { return Math.floor((i - 1) / 2); }
+      getLeftChildIndex(i) { return 2 * i + 1; }
+      getRightChildIndex(i) { return 2 * i + 2; }
 
-                    swap(i, j) {
-                        [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
-                          }
+      swap(i, j) {
+          [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
+            }
 
-                            insert(value) {
-                                this.heap.push(value);
-                                    this.heapifyUp();
-                                      }
+      insert(value) {
+          this.heap.push(value);
+          this.heapifyUp();
+        }
 
-                                        heapifyUp() {
-                                            let index = this.heap.length - 1;
-                                                while (
-                                                      index > 0 &&
-                                                            this.heap[this.getParentIndex(index)] < this.heap[index]
-                                                                ) {
-                                                                      this.swap(index, this.getParentIndex(index));
-                                                                            index = this.getParentIndex(index);
-                                                                                }
-                                                                                  }
+      heapifyUp() {
+          let index = this.heap.length - 1;
+          while (
+             index > 0 &&
+             this.heap[this.getParentIndex(index)] < this.heap[index]
+              ) {
+          this.swap(index, this.getParentIndex(index));
+          index = this.getParentIndex(index);
+                            }
+                      }
 
                                                                                     extractMax() {
                                                                                         if (this.heap.length === 0) return null;
