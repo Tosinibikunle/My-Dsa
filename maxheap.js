@@ -67,3 +67,12 @@ class MaxHeap {
                                                                                                                                                                                                                         return this.heap.length;
                                                                                                                                                                                                                           }
                                                                                                                                                                                                                           }
+const maxHeap = new MaxHeap();
+
+maxHeap.insert(10);
+maxHeap.insert(20);
+maxHeap.insert(5);
+maxHeap.insert(100);
+
+console.log(maxHeap.extractMax()); // 100
+console.log(maxHeap.peek());       // 20
