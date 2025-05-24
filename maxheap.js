@@ -37,20 +37,17 @@ class MaxHeap {
           return max;
        }
 
-                                                                                                                heapifyDown() {
-                                                                                                                    let index = 0;
-                                                                                                                        const size = this.heap.length;
+      heapifyDown() {
+        let index = 0;
+        const size = this.heap.length;
 
-                                                                                                                            while (this.getLeftChildIndex(index) < size) {
-                                                                                                                                  let largerChildIndex = this.getLeftChildIndex(index);
-                                                                                                                                        const rightChildIndex = this.getRightChildIndex(index);
+        while (this.getLeftChildIndex(index) < size) {
+            let largerChildIndex = this.getLeftChildIndex(index);
+            const rightChildIndex = this.getRightChildIndex(index);
 
-                                                                                                                                              if (
-                                                                                                                                                      rightChildIndex < size &&
-                                                                                                                                                              this.heap[rightChildIndex] > this.heap[largerChildIndex]
-                                                                                                                                                                    ) {
-                                                                                                                                                                            largerChildIndex = rightChildIndex;
-                                                                                                                                                                                  }
+          if ( rightChildIndex < size && this.heap[rightChildIndex] > this.heap[largerChildIndex] ) {
+              largerChildIndex = rightChildIndex;
+            }
 
                                                                                                                                                                                         if (this.heap[index] >= this.heap[largerChildIndex]) break;
 
