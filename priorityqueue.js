@@ -17,26 +17,23 @@ class PriorityQueue {
             this.heapifyUp();
      }
 
-                                            heapifyUp() {
-                                                let index = this.queue.length - 1;
-                                                    while (
-                                                          index > 0 &&
-                                                                this.queue[this.getParentIndex(index)].priority > this.queue[index].priority
-                                                                    ) {
-                                                                          this.swap(index, this.getParentIndex(index));
-                                                                                index = this.getParentIndex(index);
-                                                                                    }
-                                                                                      }
+      heapifyUp() {
+          let index = this.queue.length - 1;
+          while ( index > 0 && this.queue[this.getParentIndex(index)].priority > this.queue[index].priority ) {
+               this.swap(index, this.getParentIndex(index));
+               index = this.getParentIndex(index);
+      }
+   }
+   
+   extract() { 
+      if (this.queue.length === 0) return null;
+      if (this.queue.length === 1) return this.queue.pop();
 
-                                                                                        extractMin() {
-                                                                                            if (this.queue.length === 0) return null;
-                                                                                                if (this.queue.length === 1) return this.queue.pop();
-
-                                                                                                    const min = this.queue[0];
-                                                                                                        this.queue[0] = this.queue.pop();
-                                                                                                            this.heapifyDown();
-                                                                                                                return min;
-                                                                                                                  }
+      const min = this.queue[0];
+      this.queue[0] = this.queue.pop();
+      this.heapifyDown();
+      return min;
+        }
 
                                                                                                                     heapifyDown() {
                                                                                                                         let index = 0;
