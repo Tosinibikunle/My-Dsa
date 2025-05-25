@@ -68,3 +68,11 @@ class PriorityQueue {
                                                                                                                                                                                                                             return this.queue.length === 0;
                                                                                                                                                                                                                               }
                                                                                                                                                                                                                               }
+const pq = new PriorityQueue();
+
+pq.insert('eat', 3);
+pq.insert('code', 1);
+pq.insert('sleep', 2);
+
+console.log(pq.extractMin()); // { value: 'code', priority: 1 }
+console.log(pq.peek());       // { value: 'sleep', priority: 2 }
