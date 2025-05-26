@@ -35,9 +35,9 @@ class PriorityQueue {
       return min;
         }
 
-                                                                                                                    heapifyDown() {
-                                                                                                                        let index = 0;
-                                                                                                                            const size = this.queue.length;
+   heapifyDown() {
+       let index = 0;
+       const size = this.queue.length;
 
                                                                                                                                 while (this.getLeftChildIndex(index) < size) {
                                                                                                                                       let smallerChildIndex = this.getLeftChildIndex(index);
@@ -65,5 +65,3 @@ class PriorityQueue {
                                                                                                                                                                                                                             return this.queue.length === 0;
                                                                                                                                                                                                                               }
                                                                                                                                                                                                                               }
-const pq = new PriorityQueue();
-
