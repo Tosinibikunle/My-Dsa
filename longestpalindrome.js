@@ -6,14 +6,10 @@ function longestPalindrome(s) {
        let longer = odd.length > even.length ? odd : even;
        if (longer.length > res.length) res = longer;
                }
+ function expand(l, r) {
+          while (l >= 0 && r < s.length && s[l] === s[r]) { l--  r++;  }
+            return s.slice(l + 1, r);
+              }
 
-                            function expand(l, r) {
-                                while (l >= 0 && r < s.length && s[l] === s[r]) {
-                                      l--;
-                                            r++;
-                                                }
-                                                    return s.slice(l + 1, r);
-                                                      }
-
-                                                        return res;
-                                                        }
+     return res;
+        }
