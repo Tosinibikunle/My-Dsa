@@ -1,17 +1,17 @@
 class Queue {
       constructor() {
-          this.items = [];
-            }
+         this.items = [];
+     }
 
-              enqueue(item) {
-                  this.items.push(item);
-                    }
+      enqueue(item) {
+          this.items.push(item);
+     }
 
-                      dequeue() {
-                          return this.items.shift();
-                            }
+      dequeue() {
+           return this.items.shift();
+       }
 
-                              peek() {
-                                  return this.items[0];
-                                    }
-                                    }
+      peek() {
+         return this.items[0];
+             }
+   }
