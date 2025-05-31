@@ -22,17 +22,17 @@ class BinaryTree {
          return;
      }
 
-                                                        const queue = [this.root];
+   const queue = [this.root];
 
-                                                            while (queue.length) {
-                                                                  const current = queue.shift();
+   while (queue.length) {
+      const current = queue.shift();
 
-                                                                        if (!current.left) {
-                                                                                current.left = newNode;
-                                                                                        break;
-                                                                                              } else {
-                                                                                                      queue.push(current.left);
-                                                                                                            }
+      if (!current.left) {
+           current.left = newNode;
+           break;
+  } else {
+       queue.push(current.left);
+   }
 
                                                                                                                   if (!current.right) {
                                                                                                                           current.right = newNode;
