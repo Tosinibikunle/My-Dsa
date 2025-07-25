@@ -10,7 +10,7 @@
  * @param {number} sum
  * @return {boolean}
  */
-const hasPathSum = function(root, sum) {
+const hasPathSum = function (root, sum) {
     if (root === null)
         return false
     if (!root.left && !root.right)
