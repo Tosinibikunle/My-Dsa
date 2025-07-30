@@ -12,4 +12,3 @@ class SortedArray {
       return this.arr.shift(); // Removes first (smallest)
         }
     }
-}
