@@ -1,14 +1,14 @@
 class SortedArray {
-      constructor() {
-          this.arr = [];
-   }
+  constructor() {
+    this.arr = [];
+  }
 
   insert(val) {
-      this.arr.push(val);
-      this.arr.sort((a, b) => a - b);
-        }
+    this.arr.push(val);
+    this.arr.sort((a, b) => a - b);
+  }
 
   extractMin() {
-      return this.arr.shift(); // Removes first (smallest)
-        }
-    }
+    return this.arr.shift();
+  }
+}
