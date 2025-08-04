@@ -4,5 +4,5 @@ function twoSum(nums, target) {
     const diff = target - nums[i];
     if (map[diff] !== undefined) return [map[diff], i];
     map[nums[i]] = i;
-                      }
-                      }
+  }
+}
