@@ -1,9 +1,9 @@
-var fibGenerator = function*() {
-    let current=0;
-    let next=1;
+var fibGenerator = function* () {
+    let current = 0;
+    let next = 1;
 
-    while(true) {
+    while (true) {
         yield current;
-        [current,next]=[next,current+next];
+        [current, next] = [next, current + next];
     }
 };
