@@ -7,24 +7,24 @@
 // Every close bracket has a corresponding open bracket of the same type.
 
 
-var isValid = function(str) {
-   
-	const map = {
-  "(": ")",
-  "{" : "}",
-  "[": "]"
+var isValid = function (str) {
+
+  const map = {
+    "(": ")",
+    "{": "}",
+    "[": "]"
   }
-  
+
   const stack = [];
-  
-  for(let i=0; i<str.length;i++){
-  	if(map[str[i]]) {
-    	stack.push(map[str[i]])
+
+  for (let i = 0; i < str.length; i++) {
+    if (map[str[i]]) {
+      stack.push(map[str[i]])
     } else {
-        const closing = stack.pop();
-        if(closing !== str[i]) return false
+      const closing = stack.pop();
+      if (closing !== str[i]) return false
     }
-   
+
   }
- return stack.length === 0;
+  return stack.length === 0;
 }
