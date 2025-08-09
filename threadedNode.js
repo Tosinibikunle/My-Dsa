@@ -3,6 +3,6 @@ class ThreadedNode {
         this.val = val;
         this.left = null;
         this.right = null;
-        this.isThreaded = false; 
+        this.isThreaded = false;
     }
 }
