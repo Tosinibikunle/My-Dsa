@@ -6,8 +6,8 @@ function createAbortableFetch(url) {
   return { fetchPromise, abort: () => controller.abort() };
 }
 
-// Example:
+
 const { fetchPromise, abort } = createAbortableFetch('https://example.com');
 
 fetchPromise.catch(e => console.log('Fetch aborted or failed', e));
-abort(); // Cancel it
+abort(); 
