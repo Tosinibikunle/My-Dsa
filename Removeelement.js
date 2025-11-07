@@ -1,5 +1,3 @@
-
-
 var removeElement = function (nums, val) {
   const len = nums.length;
   for (i = 0; i < len; i++) {
