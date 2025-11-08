@@ -4,13 +4,10 @@ class ListNode(object):
         self.val = val
         self.next = next
 
+
 class Solution(object):
     def partition(self, head, x):
-        """
-        :type head: Optional[ListNode]
-        :type x: int
-        :rtype: Optional[ListNode]
-        """
+
         less_head = ListNode(0)
         greater_head = ListNode(0)
         less = less_head
