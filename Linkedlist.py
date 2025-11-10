@@ -3,3 +3,7 @@ class ListNode(object):
         self.val = x
         self.next = None
 
+class LinkedList:
+    def __init__(self, head=None):
+        self.head = head
+
