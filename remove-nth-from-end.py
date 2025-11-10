@@ -1,6 +1,5 @@
 class Solution(object):
 
-
     def removeNthFromEnd(self, head, n):
         dummy = 0
         dummy.next = head
