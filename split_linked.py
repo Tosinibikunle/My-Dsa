@@ -4,6 +4,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def splitListToParts(self, head: ListNode, k: int):
         length = 0

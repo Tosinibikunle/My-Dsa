@@ -1,7 +1,4 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
+
 const singleNumber = (nums) => {
     let res = 0;
     
