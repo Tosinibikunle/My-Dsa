@@ -8,13 +8,13 @@ class Solution:
         if s1 == s2:
 
             return True
-        
+
         a, b, c = [0] * 26, [0] * 26, [0] * 26
 
         if (s1 + s2) in self.map:
 
             return self.map[s1 + s2]
-        
+
         for i in range(1, n):
 
             j = n - i
@@ -29,7 +29,7 @@ class Solution:
             ):
                 self.map[s1 + s2] = True
                 return True
-            
+
             if (
                 a == c
                 and self.isScramble(s1[:i], s2[j:])
@@ -37,7 +37,7 @@ class Solution:
             ):
                 self.map[s1 + s2] = True
                 return True
-            
+
         self.map[s1 + s2] = False
-        
+
         return False
