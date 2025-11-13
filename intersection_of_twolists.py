@@ -4,7 +4,7 @@ class Solution:
         if headA is None or headB is None:
             return None
 
-        pa = headA # 2 pointers
+        pa = headA  # 2 pointers
         pb = headB
 
         while pa is not pb:
@@ -12,4 +12,4 @@ class Solution:
             pa = headB if pa is None else pa.next
             pb = headA if pb is None else pb.next
 
-        return pa 
+        return pa
