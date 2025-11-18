@@ -6,7 +6,7 @@ def digit_square_sum(n):
             n //= 10
         return total
 
-    def isHappy(n):
+def isHappy(n):
         visited = set()
 
         while n not in visited:
@@ -14,6 +14,6 @@ def digit_square_sum(n):
                 return True
 
             visited.add(n)
-            n = self.digit_square_sum(n)
+            n = digit_square_sum(n)
 
         return False
