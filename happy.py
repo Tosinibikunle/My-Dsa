@@ -1,19 +1,28 @@
-def digit_square_sum(n):
-        total = 0
-        while n > 0:
-            digit = n % 10
-            total += digit * digit
-            n //= 10
-        return total
+class Solution(object):
+    def isHappy(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
 
-def isHappy(n):
-        visited = set()
+        # 19 -> 1**2 + 9**2 -> 82 -> 64 + 4 -> 68 -> 36 + 64 -> 100 -> 1
 
-        while n not in visited:
-            if n == 1:
-                return True
+        store = []
+        string_n = str(n)
 
-            visited.add(n)
-            n = digit_square_sum(n)
+        while n != 1:
+            temp = 0
 
-        return False
+            for num in string_n:
+                temp += int(num)*int(num) 
+
+            n = temp
+            
+            if temp in store:
+                print(store)
+                return False
+            else:
+                store.append(temp)
+
+        
+        return True

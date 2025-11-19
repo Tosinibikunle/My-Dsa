@@ -10,4 +10,4 @@ class MyHashSet:
         self.d[key] = 0
 
     def contains(self, key: int) -> bool:
-        return self.d.get(key,0)!=0
+        return self.d.get(key, 0) != 0

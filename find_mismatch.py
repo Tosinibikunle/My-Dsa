@@ -9,8 +9,6 @@ class Solution(object):
         p2 = 1
         res = []
 
-        
-
         for i in range(len(nums)):
 
             if nums[p1] < nums[p2]:
@@ -24,14 +22,8 @@ class Solution(object):
 
                 return res
 
-
             else:
                 res.append(nums[p1])
                 res.append(nums[p1] + 1)
 
                 return res
-
-        
-
-
-        
