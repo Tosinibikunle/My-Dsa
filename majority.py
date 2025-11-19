@@ -1,5 +1,5 @@
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement(self, nums):
         store = {}
 
         for num in nums:
