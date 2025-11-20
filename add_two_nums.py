@@ -1,8 +1,12 @@
 class Solution:
-    
+    class ListNode():
+        def __init__(self, val=0, next=None):
+            self.val = val
+            self.next = next
+
     def addTwoNumbers(self, l1, l2):
         
-        dummy = ListNode()
+        dummy = self.ListNode()
         res = dummy
 
         total = carry = 0
@@ -19,7 +23,7 @@ class Solution:
             
             num = total % 10
             carry = total // 10
-            dummy.next = ListNode(num)
+            dummy.next = self.ListNode(num)
             dummy = dummy.next
         
         return res.next
