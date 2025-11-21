@@ -1,7 +1,6 @@
 class Solution(object):
     def restoreIpAddresses(self, s):
 
-
         def backtrack(start, current):
             if len(current) == 4:
                 if start == len(s):
