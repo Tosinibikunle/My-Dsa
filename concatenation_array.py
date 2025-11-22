@@ -7,7 +7,7 @@ class Solution(object):
 
         ans = []
         n = len(nums)
-        param = (n*2)
+        param = n * 2
 
         for i in range(param):
 
@@ -15,10 +15,5 @@ class Solution(object):
                 ans.append(nums[i])
             else:
                 ans.append(nums[i - n])
-        
+
         return ans
-
-        
-
-
-        
