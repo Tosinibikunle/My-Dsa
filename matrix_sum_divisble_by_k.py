@@ -3,8 +3,8 @@ class Solution(object):
         MOD = 10**9 + 7
         m, n = len(grid), len(grid[0])
 
-        prev = [[0]*k for _ in range(n)]
-        curr = [[0]*k for _ in range(n)]
+        prev = [[0] * k for _ in range(n)]
+        curr = [[0] * k for _ in range(n)]
 
         s = 0
         for j in range(n):
@@ -15,11 +15,11 @@ class Solution(object):
 
         for i in range(1, m):
             s = (s + grid[i][0]) % k
-            curr[0] = [0]*k
+            curr[0] = [0] * k
             curr[0][s] = 1
 
             for j in range(1, n):
-                curr[j] = [0]*k
+                curr[j] = [0] * k
                 val = grid[i][j]
                 for r in range(k):
                     nr = (r + val) % k
