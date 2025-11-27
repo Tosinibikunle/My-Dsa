@@ -1,5 +1,3 @@
-
-
 class Solution(object):
     def isPalindrome(self, head):
         l = []
@@ -7,4 +5,3 @@ class Solution(object):
             l.append(head.val)
             head = head.next
         return l == l[::-1]
-        
