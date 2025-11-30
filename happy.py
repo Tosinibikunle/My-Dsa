@@ -14,15 +14,14 @@ class Solution(object):
             temp = 0
 
             for num in string_n:
-                temp += int(num)*int(num) 
+                temp += int(num) * int(num)
 
             n = temp
-            
+
             if temp in store:
                 print(store)
                 return False
             else:
                 store.append(temp)
 
-        
         return True

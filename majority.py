@@ -8,7 +8,6 @@ class Solution:
                 store[num] += 1
             else:
                 store[num] = 1
-        
 
         max_value = float("-inf")
         final = None
