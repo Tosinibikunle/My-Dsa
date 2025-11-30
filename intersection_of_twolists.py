@@ -4,7 +4,7 @@ class Solution:
         if headA is None or headB is None:
             return None
 
-        pa = headA  # 2 pointers
+        pa = headA 
         pb = headB
 
         while pa is not pb:
