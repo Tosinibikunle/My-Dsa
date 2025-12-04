@@ -7,29 +7,26 @@ class Solution(object):
         :type points: List[List[int]]
         :rtype: int
         """
-        M = 10**9 + 7  
-        y_count = {}  
+        M = 10**9 + 7
+        y_count = {}
 
-      
         for x, y in points:
             if y in y_count:
                 y_count[y] += 1
             else:
                 y_count[y] = 1
 
-        counts = list(y_count.values())  # extract counts per level
-        r = 0  # total trapezoid count
-        s = 0  # cumulative pairs from previous levels
+        counts = list(y_count.values())
+        r = 0
+        s = 0
 
         for c in counts:
             if c >= 2:
-                # 💡 COMBINATION MATH: pairs at current level
+
                 w = c * (c - 1) // 2
 
-                # 🎯 COUNT TRAPEZOIDS: current pairs × previous pairs
                 r += w * s
 
-                # 📈 UPDATE CUMULATIVE: add current pairs for future levels
                 s += w
 
         return r % M
