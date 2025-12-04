@@ -7,10 +7,10 @@ class Solution(object):
         :type points: List[List[int]]
         :rtype: int
         """
-        M = 10**9 + 7  # modulo for large results
-        y_count = {}  # stores count of points at each y-level
+        M = 10**9 + 7  
+        y_count = {}  
 
-        # 📊 GROUP POINTS: Count points at each y-coordinate
+      
         for x, y in points:
             if y in y_count:
                 y_count[y] += 1
