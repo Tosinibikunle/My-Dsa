@@ -1,6 +1,5 @@
 import random
 
-
 class RandomizedSet(object):
 
     def __init__(self):
@@ -8,10 +7,7 @@ class RandomizedSet(object):
         self.store = set()
 
     def insert(self, val):
-        """
-        :type val: int
-        :rtype: bool
-        """
+
         if val not in self.store:
 
             self.store.add(val)
