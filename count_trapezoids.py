@@ -1,12 +1,6 @@
 class Solution(object):
     def countTrapezoids(self, points):
-        """
-        Count valid trapezoids formed by points where trapezoids have
-        horizontal parallel bases (same y-coordinates)
 
-        :type points: List[List[int]]
-        :rtype: int
-        """
         M = 10**9 + 7
         y_count = {}
 
