@@ -1,4 +1,4 @@
-var fibGenerator = function* () {
+var fibGenerator = function() {
     let current = 0;
     let next = 1;
 
