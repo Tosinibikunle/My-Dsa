@@ -1,7 +1,4 @@
-/**
- * @param {number} n
- * @return {number}
- */
+
 var climbStairs = function(n) {
     if (n === 1) { return 1; }
     const dp = [];
