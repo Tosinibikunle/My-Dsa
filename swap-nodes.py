@@ -5,5 +5,5 @@ def swapPairs(self, head):
         head.next = self.swapPairs(tmp.next)
         tmp.next = head
         return tmp
-    
+
     return head
