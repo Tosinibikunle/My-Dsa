@@ -3,12 +3,7 @@ from collections import deque
 
 class BinaryLifting:
     def __init__(self, n, adj, root=0):
-        """
-        Initializes the Binary Lifting structure.
-        :param n: Number of nodes (0 to n-1)
-        :param adj: Adjacency list (list of lists)
-        :param root: Root of the tree
-        """
+        
         self.n = n
         self.adj = adj
         self.root = root
