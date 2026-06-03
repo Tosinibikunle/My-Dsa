@@ -6,17 +6,16 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        sq = {i*i for i in range(1, n+1)}  # precompute all perfect squares
-        r = 0                               # total triple count
+        sq = {i*i for i in range(1, n+1)} 
+        r = 0                              
         
-        # 🔄 CHECK ALL PAIRS: For each possible (a,b) combination
         for i in range(1, n+1):
-            temp = i*i                      # a²
+            temp = i*i                      
             for j in range(i+1, n+1):
-                s = temp + j*j              # a² + b²
+                s = temp + j*j              
                 
-                # ✅ VERIFY: Check if sum is a perfect square
+               
                 if s in sq:
-                    r += 2                  # count both (a,b,c) and (b,a,c)
+                    r += 2            
         
         return r
