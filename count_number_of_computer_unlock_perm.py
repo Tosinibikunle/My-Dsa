@@ -1,7 +1,9 @@
 class Solution(object):
+    
     MOD = 10**9 + 7
 
     def countPermutations(self, complexity):
+        
         n = len(complexity)
         first = complexity[0]
 
