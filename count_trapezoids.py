@@ -1,11 +1,14 @@
 class Solution(object):
+    
     def countTrapezoids(self, points):
 
         M = 10**9 + 7
         y_count = {}
 
         for x, y in points:
+            
             if y in y_count:
+                
                 y_count[y] += 1
             else:
                 y_count[y] = 1
@@ -15,6 +18,7 @@ class Solution(object):
         s = 0
 
         for c in counts:
+            
             if c >= 2:
 
                 w = c * (c - 1) // 2
