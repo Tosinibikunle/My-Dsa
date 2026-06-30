@@ -1,16 +1,21 @@
 class Solution:
     def largestMagicSquare(self, grid):
+        
         R, C = len(grid), len(grid[0])
 
         row = [[0] * (C + 1) for _ in range(R)]
         col = [[0] * C for _ in range(R + 1)]
 
         for i in range(R):
+            
             for j in range(C):
+                
                 row[i][j + 1] = row[i][j] + grid[i][j]
 
         for j in range(C):
+            
             for i in range(R):
+                
                 col[i + 1][j] = col[i][j] + grid[i][j]
 
         ans = 1
