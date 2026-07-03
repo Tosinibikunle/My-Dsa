@@ -18,10 +18,7 @@ class RandomizedSet(object):
             return False
 
     def remove(self, val):
-        """
-        :type val: int
-        :rtype: bool
-        """
+
         if val in self.store:
 
             self.store.remove(val)
@@ -31,9 +28,7 @@ class RandomizedSet(object):
             return False
 
     def getRandom(self):
-        """
-        :rtype: int
-        """
+ 
         if len(self.store) >= 1:
 
             num = random.randint(0, len(self.store) - 1)
