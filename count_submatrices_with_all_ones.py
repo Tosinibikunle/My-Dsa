@@ -6,11 +6,11 @@ class Solution(object):
         for i in range(m):
             for j in range(n):
                 if mat[i][j] != 0:
-                    # Step 1: Horizontal accumulation
+                 
                     if j > 0:
                         mat[i][j] += mat[i][j - 1]
 
-                    # Step 2: Count submatrices ending at (i, j)
+                 
                     min_width = mat[i][j]
                     k = i
                     while k >= 0 and mat[k][j] > 0:
