@@ -1,5 +1,7 @@
 class Solution(object):
+    
     def validateCoupons(self, code, businessLine, isActive):
+        
         e, g, p, r = [], [], [], []
 
         for i in range(len(isActive)):
@@ -11,9 +13,11 @@ class Solution(object):
                 continue
 
             if not code[i]:
+                
                 continue
 
             if not all(ch.isalnum() or ch == '_' for ch in code[i]):
+                
                 continue
 
             if bl.startswith("e"): e.append(code[i])
