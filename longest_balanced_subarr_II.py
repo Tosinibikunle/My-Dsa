@@ -1,9 +1,6 @@
 class Solution(object):
     def longestBalanced(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+ 
         n = len(nums)
         tree_min = [0] * (4 * n)
         tree_max = [0] * (4 * n)
