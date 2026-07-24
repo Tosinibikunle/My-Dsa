@@ -1,5 +1,5 @@
 class Solution:
-    def concatenatedBinary(self, n: int) -> int:
+    def concatenatedBinary(self, n):
         MOD = 10**9 + 7
         result = 0
         bits = 0
