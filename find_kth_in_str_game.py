@@ -1,5 +1,5 @@
 class Solution:
-    def kthCharacter(self, k: int) -> str:
+    def kthCharacter(self, k):
         sb = ["a"]
         while len(sb) < k:
             size = len(sb)
