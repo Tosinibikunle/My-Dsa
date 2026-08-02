@@ -22,6 +22,7 @@ class Fenwick:
 
 
 class Solution(object):
+    
     def getResults(self, queries):
         MAXX = 50000
 
