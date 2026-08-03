@@ -8,7 +8,7 @@ class Solution:
         indexSum = defaultdict(int)
         indexFreq = defaultdict(int)
         
-        #left to right
+        
         for i in range(n):
             freq = indexFreq[nums[i]]
             sum_ = indexSum[nums[i]]
@@ -21,7 +21,6 @@ class Solution:
         indexFreq.clear()
         indexSum.clear()
 
-        #right to left
         for i in range(n - 1, -1, -1):
             freq = indexFreq[nums[i]]
             sum_ = indexSum[nums[i]]
