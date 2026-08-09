@@ -1,5 +1,5 @@
 class Solution:
-    def canBeEqual(self, s1: str, s2: str) -> bool:
+    def canBeEqual(self, s1, s2):
         return (
             ((s1[0] == s2[0] and s1[2] == s2[2]) 
              
