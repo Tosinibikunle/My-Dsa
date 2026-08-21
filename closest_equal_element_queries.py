@@ -2,7 +2,7 @@ from collections import defaultdict
 from bisect import bisect_left
 
 class Solution:
-    def solveQueries(self, nums: list[int], queries: list[int]) -> list[int]:
+    def solveQueries(self, nums: list[int], queries:
         n = len(nums)
         index_map = defaultdict(list)
 
