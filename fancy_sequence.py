@@ -15,7 +15,7 @@ class Fancy:
     def addAll(self, inc):
         self.add = (self.add + inc) % self.MOD
 
-    def multAll(self, m) ->:
+    def multAll(self, m):
         self.mul = (self.mul * m) % self.MOD
         self.add = (self.add * m) % self.MOD
 
